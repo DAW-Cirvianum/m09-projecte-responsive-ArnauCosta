@@ -1,7 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  font-family: Arvo;
 }
 
 html {
@@ -38,6 +40,14 @@ h1 {
   color: white !important;
 }
 
+h4 {
+  color: white !important;
+}
+
+.colorBlanc {
+  color: white !important;
+}
+
 html,
 body {
   height: 100%;
@@ -49,7 +59,7 @@ body {
 }
 
 header {
-  background-color: #2964a0;
+  background-color: #2b2b2b;
   height: 50px;
   width: 100%;
   padding: 10px;
@@ -63,7 +73,7 @@ header {
   display: inline-block;
   width: 26px;
   height: 3px;
-  background: #3498db;
+  background: white;
   position: relative;
   -webkit-transition: all 0.1s linear;
   transition: all 0.1s linear;
@@ -74,7 +84,7 @@ header {
   display: inline-block;
   width: 26px;
   height: 3px;
-  background: #3498db;
+  background: white;
   position: absolute;
   left: 0;
   -webkit-transition: all 0.1s linear;
@@ -89,13 +99,17 @@ header {
   top: 8px;
 }
 
+.m {
+  margin-top: 10px;
+}
+
 #menu-trigger {
   display: inline-block;
   width: 26px;
   height: 22px;
   line-height: 15px;
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 20px;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -144,11 +158,11 @@ header {
 }
 
 #menu-trigger:hover .menu-stripe:before {
-  top: -10px;
+  top: -8px;
 }
 
 #menu-trigger:hover .menu-stripe:after {
-  top: 10px;
+  top: 8px;
 }
 
 .side-menu-container {
@@ -156,7 +170,7 @@ header {
   -webkit-backface-visibility: hidden;
   width: 300px;
   height: 100%;
-  background-color: #2964a0;
+  background-color: #2b2b2b;
   color: white;
   position: fixed;
   top: 50px;
@@ -177,7 +191,7 @@ header {
 }
 
 .side-menu-container li ul {
-  background-color: #194d80;
+  background-color: #575757;
   padding: 15px;
   margin: 0;
 }
@@ -188,7 +202,7 @@ header {
 }
 
 .side-menu-container li ul:hover {
-  background-color: 34495e;
+  background-color: #2b2b2b;
 }
 
 .side-menu-container.slide-in {
@@ -202,11 +216,20 @@ header {
   transition: transform 0.2s 0s, visibility 0s 0s, -webkit-transform 0.2s 0s;
 }
 
+.text-right {
+  text-align: right;
+  padding: 0;
+}
+
 .topItem {
-  background-color: #194d80;
-  padding: 5px;
+  background-color: transparent;
+  padding: 3px;
   margin: 0;
-  border: none;
+  text-decoration: none;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
   color: white;
   text-align: center;
   font-size: 16px;
@@ -214,13 +237,14 @@ header {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   color: white;
 }
 
 .topItem:hover {
   opacity: 1;
+  color: white;
 }
 
 .page-content {
@@ -235,9 +259,10 @@ header {
           transition-duration: 0.2s;
   position: relative;
   z-index: 0;
-  background: white;
+  background-color: #000000;
   color: black;
   padding: 20px;
+  padding-bottom: 50px;
 }
 
 .input-fields .input {
@@ -262,7 +287,6 @@ header {
 
 #main {
   overflow: auto;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
 
 .grid-container {
@@ -274,9 +298,10 @@ header {
 
 .grid-item {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(71, 71, 71, 0.5);
   padding: 20px;
   font-size: 30px;
+  border-radius: 5px;
 }
 
 .item1 {
@@ -313,11 +338,59 @@ header {
   margin-left: 10px;
 }
 
-div {
-  color: white;
-}
-
 p {
   font-size: 21px;
+}
+
+.footer {
+  width: 100%;
+  background: transparent;
+  min-height: 6vh;
+  position: absolute;
+}
+
+.footer p {
+  color: white;
+  bottom: 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.faBox {
+  font-size: 40px;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fa {
+  color: white;
+  text-decoration: none;
+}
+
+.fa:hover {
+  text-decoration: none;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+  text-shadow: 1px 1px 40px white, 0 0 10px white;
+}
+
+.background-contact {
+  background-color: #202020;
+}
+
+.background-store {
+  background: -webkit-gradient(linear, left top, left bottom, from(#202020), to(black));
+  background: linear-gradient(#202020, black);
+}
+
+a {
+  color: white;
 }
 /*# sourceMappingURL=site.css.map */

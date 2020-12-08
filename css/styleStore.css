@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&display=swap');
+body
+{
+
+    line-height:1;
+    font-family: Arvo;
+    background: linear-gradient(#202020, black);
+}
+
+h5 {
+    line-height: 1.7em;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+h6 {
+    color: white;
+    font-size: 15px;
+}
+
+.products
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 10%;
+}
+
+.product-card
+{
+    padding: 2%;
+    flex-direction: column;
+    display: flex;
+    flex: 1 16%;
+    background-color: transparent;
+    box-shadow: 1px 1px 2px 1px rgba(255,255,255,1);
+}
+.product-image img
+{
+    max-width: 100%;
+    right: 50%;
+    left: 50%;
+    filter: drop-shadow(1px 1px 2px white)
+}
+
+.product-info
+{
+    margin-top: auto;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.product-buttons
+{
+    width: 100%;
+    text-align: center;
+
+}
+.del
+{
+    margin-top: 5%;
+    background: #202020;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+    bottom: 0;
+    text-transform: uppercase;
+    border: solid rgba(255,255,255,0.5) 2px;
+    font-size: 13px;
+    transition: all ease 500ms;
+}
+
+.del:hover
+{
+    box-shadow: 1px 1px 20px white, 0 0 5px white;
+    text-shadow:1px 1px 40px white, 0 0 10px white;
+}
+
+footer
+{
+    bottom: 0;
+    width: 100%;
+    background: transparent;
+    min-height: 6vh;
+}
+
+footer p
+{
+    color: white;
+    bottom: 0;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.faBox
+{
+    font-size: 40px;
+    width: 100%;
+    justify-content: space-around;
+    text-align: center;
+    display: flex;
+
+}
+.fa
+{
+    color: white;
+    text-decoration: none;
+}
+
+.fa:hover
+{
+    transform: scale(1.5);
+    transition: all ease 500ms;
+    text-shadow:1px 1px 40px white, 0 0 10px white;
+
+}
+
+@media ( max-width: 936px ) {
+
+    .product-card {
+        flex: 1 21%;
+    }
+
+
+
+    .products .product-card:first-child,
+    .products .product-card:nth-child(2) {
+        flex: 2 46%;
+    }
+
+}
+
+@media ( max-width: 600px ) {
+
+    .product-card {
+        flex: 1 46%;
+    }
+
+
+}

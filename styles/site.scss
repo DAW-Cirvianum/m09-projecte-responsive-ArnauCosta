@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  text-decoration: none;
+  font-family: Arvo;
 }
 
 html {
@@ -12,8 +16,6 @@ html {
 *:after {
   box-sizing: inherit;
 }
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,100&display=swap");
 
 .cf:before,
 .cf:after {
@@ -37,14 +39,22 @@ h1 {
   color: white !important;
 }
 
+h4 {
+  color: white !important;
+}
+
+.colorBlanc {
+  color: white !important;
+}
+
 $burger-h: 22px;
 $burger-w: 26px;
 $menu-stripe-w: 26px;
 $menu-stripe-h: 3px;
-$menu-stripe-color: #3498db;
+$menu-stripe-color: white;
 $menu-stripe-color-h: white;
 $header-h: 50px;
-$header-background: #2964a0;
+$header-background: #2b2b2b;
 $side-menu-w: 300px;
 
 @mixin transition($args...) {
@@ -112,13 +122,17 @@ header {
   }
 }
 
+.m {
+  margin-top: 10px;
+}
+
 #menu-trigger {
   display: inline-block;
   width: $burger-w;
   height: $burger-h;
   line-height: 15px;
   position: absolute;
-  top: 65%;
+  top: 50%;
   left: 20px;
   @include transform(translateY(-50%));
 
@@ -166,11 +180,11 @@ header {
       }
 
       &:before {
-        top: -10px;
+        top: -8px;
       }
 
       &:after {
-        top: 10px;
+        top: 8px;
       }
     }
   }
@@ -182,7 +196,7 @@ header {
 
   width: $side-menu-w;
   height: 100%;
-  background-color: #2964a0;
+  background-color: #2b2b2b;
   color: white;
   position: fixed;
   top: $header-h;
@@ -194,7 +208,7 @@ header {
     list-style-type: none;
 
     ul {
-      background-color: #194d80;
+      background-color: #575757;
       padding: 15px;
       margin: 0;
 
@@ -204,7 +218,7 @@ header {
       }
 
       &:hover {
-        background-color: 34495e;
+        background-color: #2b2b2b;
       }
     }
   }
@@ -218,23 +232,32 @@ header {
     @include transition(transform 0.2s 0s, visibility 0s 0s);
   }
 }
+.text-right {
+  text-align: right;
+  padding: 0;
+}
 
 .topItem {
-  background-color: #194d80;
-  padding: 5px;
+  background-color: transparent;
+  padding: 3px;
   margin: 0;
-  border: none;
+  text-decoration: none;
+  border-radius: 3px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: white;
   color: white;
   text-align: center;
   font-size: 16px;
   opacity: 0.6;
   transition: 0.3s;
   display: inline-block;
-  text-decoration: none;
+  text-decoration: none !important;
   cursor: pointer;
   color: white;
   &:hover {
     opacity: 1;
+    color: white;
   }
 }
 
@@ -247,9 +270,10 @@ header {
   transition-duration: 0.2s;
   position: relative;
   z-index: 0;
-  background: white;
+  background-color: #000000;
   color: black;
   padding: 20px;
+  padding-bottom: $header-h;
 }
 
 .input-fields .input {
@@ -274,7 +298,6 @@ header {
 
 #main {
   overflow: auto;
-  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
 }
 
 .grid-container {
@@ -285,9 +308,10 @@ header {
 
 .grid-item {
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(71, 71, 71, 0.5);
   padding: 20px;
   font-size: 30px;
+  border-radius: 5px;
 }
 
 .item1 {
@@ -315,10 +339,50 @@ header {
   margin-left: 10px;
 }
 
-div {
-  color: white;
-}
-
 p {
   font-size: 21px;
+}
+
+.footer {
+  width: 100%;
+  background: transparent;
+  min-height: 6vh;
+  position: absolute;
+  p {
+    color: white;
+    bottom: 0;
+    margin-top: 5px;
+    text-align: center;
+  }
+}
+
+.faBox {
+  font-size: 40px;
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  display: flex;
+}
+
+.fa {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    transform: scale(1.5);
+    transition: all ease 500ms;
+    text-shadow: 1px 1px 40px white, 0 0 10px white;
+  }
+}
+
+.background-contact {
+  background-color: #202020;
+}
+
+.background-store {
+  background: linear-gradient(#202020, black);
+}
+
+a {
+  color: white;
 }

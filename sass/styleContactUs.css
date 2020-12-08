@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/*#ffffff • #d0e1f9 • #4d648d • #283655 • #1e1f26 */
+@import url("https://fonts.googleapis.com/css2?family=Arvo&display=swap");
+body {
+  background-color: #202020;
+  font-family: Arvo;
+  height: 100%;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 30vw;
+  padding: 30px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 20px black;
+          box-shadow: 0 0 20px black;
+}
+
+.title {
+  color: white;
+  text-align: center;
+  margin-bottom: 1em;
+  letter-spacing: 2.5px;
+  font-size: 2.5vw;
+  text-transform: uppercase;
+}
+
+.contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.input-fields {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-right: 4%;
+  width: 100%;
+  width: 100%;
+}
+
+.input-fields .input {
+  margin: 10px 0;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid white;
+  padding: 10px;
+  color: white;
+  width: 92%;
+  outline: none;
+  font-size: 15px;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+.btn {
+  width: 100%;
+  display: inline-block;
+}
+
+.btn1 {
+  margin-top: 25px;
+  background: transparent;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  cursor: pointer;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-decoration: none;
+  bottom: 0;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  float: left;
+  width: 99%;
+  text-align: center;
+  font-size: 15px;
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+  border: solid white 2px;
+}
+
+.btn1:hover {
+  background-color: white;
+  color: black;
+}
+
+.textarea {
+  margin-top: 20px;
+  height: 13vw;
+  color: white;
+  width: 96%;
+  outline: none;
+  background-color: transparent;
+  border: solid 2px white;
+  font-size: 15px;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
+  background: transparent;
+  min-height: 6vh;
+  position: absolute;
+}
+
+footer p {
+  color: white;
+  bottom: 0;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.faBox {
+  font-size: 40px;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fa {
+  color: white;
+  text-decoration: none;
+}
+
+.fa:hover {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+  -webkit-transition: all ease 500ms;
+  transition: all ease 500ms;
+  text-shadow: 1px 1px 40px white, 0 0 10px white;
+}
+
+@media screen and (max-width: 570px) {
+  .wrapper {
+    height: auto;
+    max-width: 70vw;
+  }
+  .textarea {
+    height: 20vw;
+  }
+  .title {
+    font-size: 4.5vw;
+  }
+}
+/*# sourceMappingURL=styleContactUs.css.map */
